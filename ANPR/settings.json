@@ -1,0 +1,4 @@
+{
+  "DatabaseConnection": "Server=DESKTOP-PDF7FUN;Database=BgData_Plates;Trusted_Connection=True;TrustServerCertificate=True;",
+  "ANRPFolderPath": "C:\\ACS Output Test"
+}

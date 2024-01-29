@@ -1,0 +1,59 @@
+﻿@model AgeViewModel
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="wright-text-styling w-50 mx-auto">
+    <h1 class="display-4 text-center">Age Calculator</h1>
+    <hr />
+    <form id="dateFormId" method="post">
+        <div>
+            <div class="input-group mb-3 ">
+                <label class="input-group-text" for="inputGroupSelect01">Birthday</label>
+                <input type="date" class="form-control" asp-for="Birthday" aria-describedby="inputGroup-sizing-default" /><br />
+                <input type="submit" class="btn btn-outline-secondary" value="Calculate" id="dateInput" />
+            </div>
+            <div class="text-center">
+                <span asp-validation-for="Birthday"> </span>
+            </div>
+        </div>
+    </form>
+    @if (Model != null && ViewData.ModelState.IsValid)
+    {
+        <div class="row w-75 mx-auto">
+            <div class="col-md">
+                <table class="table table-hover table-responsive table-sm">
+                    <thead colspan="2" style="font"> <strong>Your age as for @Model.CurrDate</strong> </thead>
+                    <tbody>
+                        <tr>
+                            <td>Years</td>
+                            <td>@Model.Years</td>
+                        </tr>
+                        <tr>
+                            <td>Months</td>
+                            <td>@Model.Months</td>
+                        </tr>
+                        <tr>
+                            <td>Days</td>
+                            <td>@Model.Days</td>
+                        </tr>
+                        <tr>
+                            <td>Hours</td>
+                            <td>@Model.Hours</td>
+                        </tr>
+                        <tr>
+                            <td>Minutes</td>
+                            <td>@Model.Minutes</td>
+                        </tr>
+                        <tr>
+                            <td>Seconds</td>
+                            <td>@Model.Seconds</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    }
+</div>
+
+
